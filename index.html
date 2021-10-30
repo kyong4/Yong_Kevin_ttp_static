@@ -1,6 +1,18 @@
-<DOCTYPE html>
+
 <html>
   <body>
-<h1>Kevin Yong</h1>
+<h1>My name is Kevin Yong, my hobbies are listening to music and watching Youtube. The current time: <span id='timeNow'></span></h1>
+
+
+<script>
+	function displayTime() {
+var today = new Date();
+var time = today.toLocaleTimeString();
+document.getElementById("timeNow").innerHTML= time;
+	currentTime=setInterval('displayTime()',1000); //refreshes every 1000ms
+	}
+</script>
+	<body onload=displayTime();>
+
   </body>  
 </html>
